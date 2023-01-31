@@ -6,7 +6,7 @@ set hlsearch                " highlight search
 set incsearch               " incremental search
 set tabstop=4               " number of columns occupied by a tab 
 set softtabstop=4           " see multiple spaces as tabstops so <BS> does the right thing
-set expandtab               " converts tabs to white space
+"set expandtab               " converts tabs to white space
 set shiftwidth=4            " width for autoindents
 set autoindent              " indent a new line the same amount as the line just typed
 set number                  " add line numbers
@@ -44,9 +44,8 @@ call plug#begin()
  Plug 'ap/vim-css-color' " CSS Color Preview
  Plug 'tc50cal/vim-terminal' " Vim Terminal
  Plug 'preservim/tagbar' " Tagbar for code navigation
- Plug 'terryma/vim-multiple-cursors' " CTRL + N for multiple cursors
-
-set encoding=UTF-8
+ "Plug 'terryma/vim-multiple-cursors' " CTRL + N for multiple cursors
+ set encoding=UTF-8
 
 call plug#end()
 
@@ -100,4 +99,5 @@ let g:airline_symbols.readonly = ''
 let g:airline_symbols.linenr = ''
 
 inoremap <silent><expr> <CR> coc#pum#visible() ? coc#pum#confirm(): "\<CR>"
-"inoremap <silent><expr> <Tab> pumvisible() ? coc#_select_confirm() : "<Tab>" 
+" For this you have to disable UltiSnips or change the key for expanding that
+"inoremap <silent><expr> <Tab> pumvisible() ? coc#_select_confirm() : "\<Tab>" 

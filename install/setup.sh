@@ -20,7 +20,7 @@ link_file () {
 
 
 install_dotfiles () {
-	echo 'installing dotfiles'
+	echo '...installing dotfiles'
 
 	local overwrite_all=false backup_all=false skip_all=false
 
@@ -35,9 +35,12 @@ install_dotfiles () {
 
 			mkdir -p "$dir"
 
+            echo "copying $src to $dir"
 			cp -r "$src" "$dir"
 		done
 	done
 }
 
 install_dotfiles
+
+echo '...successfully installed'

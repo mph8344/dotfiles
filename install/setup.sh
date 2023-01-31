@@ -24,7 +24,7 @@ install_dotfiles () {
 
 	local overwrite_all=false backup_all=false skip_all=false
 
-	find -H "$DOTFILES" -maxdepth 2 -name 'links.prop' -not -path '*.git*' | while read linkfile
+	find -H "$DOTFILES" -maxdepth 2 -name 'links.prop' | while read linkfile
 	do
 		cat "$linkfile" | while read line
 		do
@@ -36,7 +36,6 @@ install_dotfiles () {
 			mkdir -p "$dir"
 
 			cp -r "$src" "$dir"
-
 		done
 	done
 }

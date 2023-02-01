@@ -1,16 +1,16 @@
 #!/usr/bin/env bash
 #
 
-cd "$(dirname "$0")/.."
+cd "$(dirname "$0")/.." || exit
 DOTFILES=$(pwd -P)
 
 link_file () {
 	local src=$1 dst=$2
 
-	local overwrite=
-	local backup=
-	local skip=
-	local action=
+	#local overwrite=
+	#backup=
+	#local skip=
+	#local action=
 
 	if [ -f "$dst" ] || [ -d "$dst" ] || [ -L "$dst" ]
 	then
@@ -37,7 +37,7 @@ install_dotfiles () {
 
             echo "copying $src to $dir"
 			cp -r "$src" "$dir"
-		done
+    done
 	done
 }
 

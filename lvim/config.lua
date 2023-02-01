@@ -26,6 +26,7 @@ lvim.leader = "space"
 lvim.keys.normal_mode["<C-s>"] = ":w<cr>"
 lvim.keys.normal_mode["<C-l>"] = ":bnext<cr>"
 lvim.keys.normal_mode["<C-h>"] = ":bprev<cr>"
+lvim.keys.normal_mode["<C-f>"] = ":NvimTreeFocus<cr>"
 lvim.keys.normal_mode["<C-n>"] = ":NvimTreeToggle<cr>"
 lvim.keys.normal_mode[", "] = ":nohl<cr>"
 -- unmap a default keymapping

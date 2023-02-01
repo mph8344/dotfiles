@@ -73,7 +73,6 @@ nmap <F8> :TagbarToggle<CR>
 
 let g:NERDTreeDirArrowExpandable="+"
 let g:NERDTreeDirArrowCollapsible="~"
-
 " --- Just Some Notes ---
 " :PlugClean :PlugInstall :UpdateRemotePlugins
 "
@@ -81,6 +80,21 @@ let g:NERDTreeDirArrowCollapsible="~"
 " :CocInstall coc-clangd
 " :CocInstall coc-snippets
 " :CocCommand snippets.edit... FOR EACH FILE TYPE
+let g:coc_global_extensions = [
+\ 'coc-snippets',
+\ 'coc-pairs',
+\ 'coc-tsserver',
+\ 'coc-json',
+\	]
+
+if isdirectory('./node_modules') && isdirectory('./node_modules/prettier')
+	let g:coc_global_extensions += ['coc-prettier']
+endif
+
+if isdirectory('./node_modules') && isdirectory('./node_modules/eslint')
+	let g:coc_global_extensions += ['coc-eslint']
+endif
+
 
 " air-line
 let g:airline_powerline_fonts = 1

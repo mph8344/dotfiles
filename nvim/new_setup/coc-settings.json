@@ -1,0 +1,33 @@
+{
+	"suggest.noselect": true,
+	"suggest.enablePreselect": false,
+	"[typescript.tsx][typescript][typescriptreact][ts]": {
+		"coc.preferences.formatOnSave": true
+	},
+	"[javascriptreact][javascript][json]": {
+		"coc.preferences.formatOnSave": true
+	},
+	"python.pythonPath": "/usr/bin/python3",
+	"[tsserver]": {
+		"coc.preferences.formatOnType": true
+	},
+	"coc.preferences.formatOnType": true,
+	"prettier.disableSuccessMessage": true,
+	"languageserver": {
+		"golang": {
+			"command": "gopls",
+			"rootPatterns": [
+				"go.mod",
+				".vim/",
+				".git/",
+				".hg/"
+			],
+			"filetypes": [
+				"go"
+			],
+			"initializationOptions": {
+				"usePlaceholders": true
+			}
+		}
+	}
+}

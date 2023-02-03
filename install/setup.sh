@@ -37,7 +37,7 @@ install_dotfiles () {
 
             echo "copying $src to $dir"
 			cp -r "$src" "$dir"
-    done
+       done
 	done
 }
 
@@ -45,7 +45,8 @@ create_env_file () {
 	if test -f "$HOME/.env.sh"; then
 		echo "$HOME/.env.sh file already exists, skipping"
 	else
-		echo "export DOTFILES=$DOTFILES" > $HOME/.env.sh
+		echo "export DOTFILES=$DOTFILES" >> $HOME/.env.sh
+        echo "alias lvim=$HOME/.local/bin/lvim"
 		echo 'created ~/.env.sh'
 	fi
 }

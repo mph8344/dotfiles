@@ -153,6 +153,7 @@ linters.setup {
 lvim.plugins = {
   { "ledger/vim-ledger" },
   { "shaunsingh/nord.nvim" },
+  { "neoclide/coc.nvim" },
   {
     "folke/tokyonight.nvim",
     config = function()

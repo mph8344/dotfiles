@@ -23,8 +23,6 @@ set ttyfast                 " Speed up scrolling in Vim
 " set noswapfile            " disable creating swap file
 " set backupdir=~/.cache/vim " Directory to store backup files.
 
-let mapleader = " "
-
 call plug#begin()
  " Themes
  Plug 'folke/tokyonight.nvim' 
@@ -48,8 +46,6 @@ call plug#begin()
  Plug 'ap/vim-css-color' " CSS Color Preview
  Plug 'tc50cal/vim-terminal' " Vim Terminal
  Plug 'preservim/tagbar' " Tagbar for code navigation
- Plug 'nvim-lua/plenary.nvim'
- Plug 'nvim-telescope/telescope.nvim', { 'tag': '0.1.4' }
  "Plug 'terryma/vim-multiple-cursors' " CTRL + N for multiple cursors
  set encoding=UTF-8
 
@@ -71,19 +67,6 @@ nnoremap <C-n> :NERDTree<CR>
 nnoremap <C-t> :NERDTreeToggle<CR>
 nnoremap <C-l> :call CocActionAsync('jumpDefinition')<CR>
 nnoremap <C-s> :update<CR>
-
-nnoremap <leader><Left> :tabprev<CR>
-nnoremap <leader><Right> :tabnext<CR>
-nnoremap <leader><Up> :tablast<CR>
-nnoremap <leader><Down> :tabfirst<CR>
-
-" Telescope keybinds
-
-" Find files using Telescope command-line sugar.
-nnoremap <leader>ff <cmd>Telescope find_files<cr>
-nnoremap <leader>fg <cmd>Telescope live_grep<cr>
-nnoremap <leader>fb <cmd>Telescope buffers<cr>
-nnoremap <leader>fh <cmd>Telescope help_tags<cr>
 
 nmap <F8> :TagbarToggle<CR>
 
